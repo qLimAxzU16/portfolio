@@ -603,6 +603,7 @@ mark {
 
 .illustration {
     filter: brightness(90%) saturate(90%);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .illustration .beam {
