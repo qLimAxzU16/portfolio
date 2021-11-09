@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
-let htmlPageNames = ["index", "test"];
+let htmlPageNames = ["index"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
     return new HtmlWebpackPlugin({
         template: `./src/${name}.html`, // relative path to the HTML files
