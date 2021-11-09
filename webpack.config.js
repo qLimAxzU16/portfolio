@@ -46,4 +46,10 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
+    optimization: {
+        minimize: false,
+    },
+    performance: {
+        maxAssetSize: 10 * (1000 * 1000),
+    },
 };
