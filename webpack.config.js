@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
-let htmlPageNames = ["index"];
+let htmlPageNames = ["index", "test"];
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
     return new HtmlWebpackPlugin({
         template: `./src/${name}.html`, // relative path to the HTML files
@@ -26,6 +26,10 @@ module.exports = {
                     "css-loader",
                     "postcss-loader",
                 ],
+            },
+            {
+                test: /\.js?$/,
+                include: [path.resolve(__dirname, "src", "js")],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
