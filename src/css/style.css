@@ -497,7 +497,7 @@
 }
 
 .highlight-underline {
-    @apply absolute left-0 bottom-[2px] xl:bottom-1 w-full h-[1px] sm:h-[2px] bg-[#3effdd] z-[-1];
+    @apply absolute left-0 bottom-0 xl:bottom-1 w-full h-[1px] sm:h-[2px] bg-[#3effdd] z-[-1];
 }
 
 body {
