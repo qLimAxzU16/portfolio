@@ -510,21 +510,10 @@ body {
 }
 
 .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 90px;
     height: 90px;
-    border-radius: 50%;
     background-color: #eeff04;
-    mix-blend-mode: difference;
-    z-index: 10;
-    user-select: none;
-    pointer-events: none;
-}
-
-#light-bulb:hover > .cursor {
-    height: 10px;
+    @apply pointer-events-none select-none z-10 left-0 top-0 fixed rounded-full transition-opacity duration-200;
 }
 
 .font-platform {
@@ -656,4 +645,27 @@ mark {
     100% {
         transform: rotate(0deg);
     }
+}
+
+#site-list li a:hover:before {
+    content: "↗";
+    margin-right: 0.5rem;
+}
+
+#site-list li a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+#site-list li a:hover:after {
+    transform: scaleX(0);
+    transform-origin: bottom right;
 }
