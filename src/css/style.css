@@ -669,3 +669,19 @@ mark {
     transform: scaleX(0);
     transform-origin: bottom right;
 }
+
+.pulse {
+    animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
