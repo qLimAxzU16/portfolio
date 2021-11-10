@@ -594,6 +594,7 @@ mark {
 }
 
 .dark svg#light-bulb .outer-circle {
+    -webkit-tap-highlight-color: transparent;
     animation: flicker 1.3s 0.1s forwards;
 }
 
