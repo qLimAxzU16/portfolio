@@ -582,8 +582,11 @@ mark {
     stroke: #3effdd;
 }
 
-.dark svg#light-bulb .outer-circle {
+svg#light-bulb {
     -webkit-tap-highlight-color: transparent;
+}
+
+.dark svg#light-bulb .outer-circle {
     animation: flicker 1.3s 0.1s forwards;
 }
 
