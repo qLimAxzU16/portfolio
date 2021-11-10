@@ -660,9 +660,9 @@ mark {
     height: 1px;
     bottom: 0;
     right: 0;
-    background-color: #000;
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
+    @apply bg-[#242424] dark:bg-white;
 }
 
 #site-list li a:hover:after {
