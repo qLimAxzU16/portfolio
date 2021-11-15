@@ -70,8 +70,13 @@
 
                         </svg>
                     </div>
-                    <div class="">
-
+                    <div id="red w-16 h-16 bg-red-400">
+                    </div>
+                    <div id="green w-16 h-16 bg-green-400 absolute z-0">
+                    </div>
+                    <div id="blue w-16 h-16 bg-blue-400">
+                    </div>
+                    <div>
                         <ul id="site-list"
                             class="font-helvetica-now-display font-medium uppercase text-[10px] sm:text-sm text-right">
                             <li>
@@ -218,8 +223,12 @@
                 <img src="./images/sites/vsd.png" alt="vsd">
             </picture>
             <picture class="h-[66.66vh] md:h-screen flex sticky top-0 p-14 md:p-24 2xl:p-36"
-                style="background-color: #191C1E;">
+                style="background-color: #daeaf5;">
                 <img src="./images/sites/mongrel.png" alt="mongrel">
+            </picture>
+            <picture class="h-[66.66vh] md:h-screen flex sticky top-0 p-14 md:p-24 2xl:p-36"
+                style="background-color: #FC9595;">
+                <img src="./images/sites/juthoor.png" alt="juthoor">
             </picture>
             <picture class="h-[66.66vh] md:h-screen flex items-center justify-center sticky top-0 p-14 md:p-24 2xl:p-36"
                 style="background-color: #4939d5;">
@@ -234,7 +243,27 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="./js/DrawSVGPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HVWQ4P3T4"></script>
     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6HVWQ4P3T4');
+    </script>
+    <script>
+
+        $('#test').on('click', function () {
+            console.log('clicked div')
+        })
+
+        $('#test-btn').on('click', function () {
+            console.log('clicked button')
+        })
+
         function setUserPreferColorScheme() {
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
