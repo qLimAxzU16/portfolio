@@ -513,7 +513,7 @@ body {
     width: 90px;
     height: 90px;
     background-color: #eeff04;
-    @apply pointer-events-none select-none z-10 left-0 top-0 fixed rounded-full transition-opacity duration-200;
+    @apply pointer-events-none select-none z-10 left-0 top-0 fixed rounded-full transition-opacity duration-200 mix-blend-exclusion;
 }
 
 .font-platform {
